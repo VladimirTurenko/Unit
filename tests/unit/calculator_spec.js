@@ -65,7 +65,13 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 0);
   })
 
-  it('should be able to divide', function() {
+  it('Checking division by zero', function() {
+    calculator.previousTotal = 8;
+    calculator.divide(4);
+    assert.equal(calculator.runningTotal, 2);
+  })
+  
+   it('should be able to divide', function() {
     calculator.previousTotal = 8;
     calculator.divide(4);
     assert.equal(calculator.runningTotal, 2);
